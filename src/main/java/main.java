@@ -3,11 +3,14 @@ import processing.core.PApplet;
 public class main extends PApplet {
 
     public static void main(String[] args) { PApplet.main("main"); }
+    Taering taering = new Taering(this);
     Button buttonTerning6 = new Button(10, 10, 150, 50, "Slå med 6s terning!",this);
     Button buttonTerning10 = new Button(340, 10, 150, 50, "Slå med 10s terning!",this);
 
+    Button buttonTerning69 = new Button(340, 70, 150, 50, "Slå med 69s terning!",this);
+    Button buttonTerning420 = new Button(10, 70, 150, 50, "Slå med 420s terning!",this);
     int sum;
-    int terningeKast;
+    int terningeKast = 0;
 
     @Override
     public void settings() {
@@ -18,19 +21,36 @@ public class main extends PApplet {
     public void setup() {
         buttonTerning6.addAction(new Action() {
                                      public void execute() {
-                                         terningeKast = (int)random(1, 7);
-                                         sum += terningeKast;
+                                         sum = taering.terningenRoll(1,6,sum);
+                                         terningeKast= taering.getAntal();
                                      }
                                  }
         );
 
           buttonTerning10.addAction(new Action() {
     public void execute() {
-      terningeKast = (int)random(1, 11);
-      sum += terningeKast;
+        sum = taering.terningenRoll(1,11,sum);
+        terningeKast = taering.getAntal();
     }
   }
   );
+
+        buttonTerning69.addAction(new Action() {
+                                      public void execute() {
+                                          sum = taering.terningenRoll(1,69,sum);
+                                          terningeKast= taering.getAntal();
+                                      }
+                                  }
+        );
+
+        buttonTerning420.addAction(new Action() {
+                                      public void execute() {
+                                          sum = taering.terningenRoll(1,420,sum);
+                                          terningeKast= taering.getAntal();
+
+                                      }
+                                  }
+        );
 
 
 
@@ -41,6 +61,8 @@ public class main extends PApplet {
         clear();
         buttonTerning6.display();
         buttonTerning10.display();
+        buttonTerning69.display();
+        buttonTerning420.display();
         fill(255);
         textAlign(CENTER);
         text("Du har kastet " + terningeKast, width/2, 200);
@@ -53,6 +75,8 @@ public class main extends PApplet {
 
           buttonTerning6.click(mouseX,mouseY);
           buttonTerning10.click(mouseX,mouseY);
+          buttonTerning420.click(mouseX,mouseY);
+          buttonTerning69.click(mouseX,mouseY);
 
 
     }

@@ -54,6 +54,8 @@ public class Button {
         // på denne måde er så jeg kunne gennembruge gammel kode da jeg går indfor genbrug
         float mouseX = mx;
         float mouseY = my;
+
+        //her tjekker den at vis musen er indenfor firekanten og du klikker på knappen så ville den køre a.execute
         if (mouseX > x &&
                 mouseX < x + w &&
                 mouseY > y &&
