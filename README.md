@@ -11,7 +11,7 @@ Dette er et gui bibletotek til [processing](https://processing.org/ ). I Mappen 
 Button buttonTerning6 = new Button(XKordinat, YKordinat, X Størrelse, Y Størrelse, Hvad der skal stå på knaooen ,PApllet);
 
 ```
-### ændre knaps funktion
+### Ændre knaps funktion
 ``` Java
 // Den måde du giver en kanp en funktion er at 
     
