@@ -6,7 +6,7 @@ Dette er et gui bibletotek til [processing](https://processing.org/ ). I Mappen 
 
 ## Code Samples
 
-``` Ruby
+``` Java
 //Den måde man konstruere knappen er
 Button buttonTerning6 = new Button(XKordinat, YKordinat, X Størrelse, Y Størrelse, Hvad der skal stå på knaooen ,PApllet);
 
